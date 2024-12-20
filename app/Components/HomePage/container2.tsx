@@ -30,17 +30,23 @@ const container2 = () => {
             </div>
           </div>
           <div className="col w-full lg:w-1/2 flex justify-center items-center gap-5 mt-8 lg:mt-0 flex-wrap">
-            <div className={Styles.squareBox}>
-              <h3>180+</h3>
-              <h4>surgeries performed</h4>
+            <div className="flex justify-center items-center flex-col rounded-2xl bg-white w-44 h-44 shadow-md opacity-100">
+              <h3 className="text-4xl font-medium text-[#012957]">180+</h3>
+              <h4 className="text-lg font-normal text-[#101112] text-center">
+                surgeries performed
+              </h4>
             </div>
-            <div className={Styles.squareBox}>
-              <h3>180+</h3>
-              <h4>surgeries performed</h4>
+            <div className="flex justify-center items-center flex-col rounded-2xl bg-white w-44 h-44 shadow-md opacity-100">
+              <h3 className="text-4xl font-medium text-[#012957]">180+</h3>
+              <h4 className="text-lg font-normal text-[#101112] text-center">
+                surgeries performed
+              </h4>
             </div>
-            <div className={Styles.squareBox}>
-              <h3>180+</h3>
-              <h4>surgeries performed</h4>
+            <div className="flex justify-center items-center flex-col rounded-2xl bg-white w-44 h-44 shadow-md opacity-100">
+              <h3 className="text-4xl font-medium text-[#012957]">180+</h3>
+              <h4 className="text-lg font-normal text-[#101112] text-center">
+                surgeries performed
+              </h4>
             </div>
           </div>
         </div>
