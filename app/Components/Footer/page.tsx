@@ -16,14 +16,14 @@ const page = () => {
     <footer>
       <div className="container mx-auto px-3 w-full">
         <div className="row flex">
-          <div className="col w-full flex flex-col md:flex-row justify-center items-center py-10 gap-10">
+          <div className="col w-full flex flex-col md:flex-row justify-center items-center py-10 gap-6 lg:gap-10">
             <Image
               src={Logo}
               alt="logo"
               height={133}
               className="rounded-md w-2/5 lg:w-1/4 h-auto"
             />
-            <h2 className="text-[#C8D7E3] text-[24px] md:text-[90px] leading-[28px] md:leading-[110px] whitespace-pre">
+            <h2 className="text-[#C8D7E3] text-[24px] md:text-[50px] md:leading-[60px] lg:text-[90px] leading-[28px] lg:leading-[110px] whitespace-pre">
               RESTORE PODIATRY <br /> & LASER CENTER
             </h2>
           </div>

@@ -280,9 +280,11 @@
 
 .doctorContent {
   background-image: url("../../Assets/Doctors-Bg.png");
-  background-color:#002856;
+  background-color: #002856;
   background-size: cover;
   display: flex;
+  justify-content: center;
+  align-items: start;
   background-repeat: no-repeat;
   padding-bottom: 2%;
 }
@@ -290,7 +292,7 @@
 .doctorImage {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center !important;
 }
 
 .doctorImage img {
@@ -304,19 +306,16 @@
   .doctorContent {
     height: 100%;
     flex-direction: column-reverse;
-  
   }
   .doctorImage {
     max-width: 100%;
     bottom: 0;
-
   }
 
   .doctorImage img {
-    width: 100%;
+    width: 70%;
     height: 100%;
-    margin-bottom: 30px;
-    border: 5px solid #ffffff; 
+    border: 5px solid #ffffff;
     margin-top: 10%;
   }
 }
