@@ -7,6 +7,7 @@ import Footer from "@/app/Components/Footer/page"
 
 const poppins = Poppins({
   variable: "--font-poppins-regular",
+  subsets: ['latin', 'latin-ext'],
   weight: "400"
 });
 

@@ -272,14 +272,14 @@
 /* ///////// container 7 ///////// */
 
 .container7 {
-  background-image: url("@/app/Assets/Our-Patients-Bg.png");
+  background-image: url("../../Assets/Our-Patients-Bg.png");
   background-size: cover;
 }
 
 /* ///////// container 8 ///////// */
 
 .doctorContent {
-  background-image: url("@/app/Assets/Doctors-Bg.png");
+  background-image: url("../../Assets/Doctors-Bg.png");
   background-color:#002856;
   background-size: cover;
   display: flex;
