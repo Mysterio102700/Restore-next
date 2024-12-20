@@ -3,6 +3,7 @@ import { Poppins  } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/Components/Navbar/page";
 import Footer from "@/app/Components/Footer/page"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 
 const poppins = Poppins({
@@ -28,6 +29,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <SpeedInsights />
         <Footer />
       </body>
     </html>

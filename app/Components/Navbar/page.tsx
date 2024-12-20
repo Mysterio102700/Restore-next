@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Logo from '@/app/Assets/logo.png';
 import Style from '@/app/Components/Navbar/Navbar.module.css';
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
