@@ -10,7 +10,7 @@ interface Slide {
   Date: string;
   review: string;
   img?: string;
-  color?: string; // Added color property
+  color?: string; 
 }
 
 const Star = () => (
@@ -129,6 +129,41 @@ const Carousel = () => {
     },
   ]);
 
+  interface ArrowProps {
+    className?: string;
+    style?: React.CSSProperties;
+    onClick?: () => void;
+  }
+
+  function SampleNextArrow(props: ArrowProps) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  interface ArrowProps {
+    className?: string;
+    style?: React.CSSProperties;
+    onClick?: () => void;
+  }
+
+  function SamplePrevArrow(props: ArrowProps) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", zIndex: 10 }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+
   const settings = {
     dots: false,
     infinite: true,
@@ -141,6 +176,8 @@ const Carousel = () => {
     className: "center",
     centerPadding: "60px",
     swipeToSlide: true,
+    nextArrow: <SampleNextArrow  />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
