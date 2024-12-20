@@ -1,18 +1,14 @@
-import type { Config } from "tailwindcss";
-
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-    },
-  },
-  plugins: [],
-} satisfies Config;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: [
+	  './pages/**/*.{js,ts,jsx,tsx}', // Includes JavaScript and TypeScript in the pages directory
+	  './components/**/*.{js,ts,jsx,tsx}', // Includes JavaScript and TypeScript in the components directory
+	  './app/**/*.{js,ts,jsx,tsx}', // Includes the app directory if you are using Next.js 13+ App Router
+	  './public/index.html', // Optional, only if you have custom HTML
+	],
+	theme: {
+	  extend: {},
+	},
+	plugins: [],
+  }
+  

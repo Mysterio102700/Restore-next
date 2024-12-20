@@ -14,8 +14,60 @@
   }
 }
 
+h2 {
+  @apply font-semibold text-[46px] leading-[56.17px] text-left text-[#194F8C] capitalize;
+}
+
+h3 {
+  @apply font-medium text-[34px] leading-[41.51px] text-left text-[#6E8AAB] capitalize;
+}
+
+p {
+  @apply font-normal text-[16px] leading-[19.09px];
+}
+
+button {
+  @apply font-medium text-[16px] leading-[19.09px];
+}
+
+.gradientButton {
+  @apply py-4 px-8 rounded-full text-green-100;
+  background: linear-gradient(to right, #002856 60%, #5b9043 100%);
+}
+
+.slick-slide > div {
+  @apply mx-3;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
+}
+
+.slick-prev:before {
+  margin: 15px;
+}
+.slick-next:before {
+  margin: -15px;
+}
+
+@media only screen and (max-width: 450px) {
+  h2 {
+    @apply text-[36px] leading-[46.17px];
+  }
+  h3 {
+    @apply font-medium text-[24px] leading-[31.51px] text-[#6E8AAB];
+  }
+
+  p {
+    @apply text-[12px] leading-[20.51px];
+  }
+
+  button {
+    @apply text-[12px] leading-[20.51px];
+  }
+}
+
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply font-[poppins];
 }
