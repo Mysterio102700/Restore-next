@@ -20,6 +20,7 @@
   color: #101112;
   transition: 0.3s;
   padding: 0 10px;
+  border-bottom: 3px solid white;
 }
 
 .Navbar .navItems ul li ul {
@@ -48,6 +49,7 @@
   font-size: 14px;
   color: #fff;
   padding: 10px 20px;
+  border: none;
 }
 
 .Navbar .navItems ul li ul li:hover {
