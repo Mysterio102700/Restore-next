@@ -43,6 +43,7 @@
   background-color: #002856;
   transform: translateX(-20%);
   gap: 0;
+  z-index: 1;
 }
 
 .Navbar .navItems ul li ul li {
