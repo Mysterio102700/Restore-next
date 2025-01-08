@@ -1,29 +1,54 @@
-'use client';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import Logo from '@/app/Assets/logo.png';
-import Style from '@/app/Components/Navbar/Navbar.module.css';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import Logo from "@/app/Assets/logo.png";
+import Style from "@/app/Components/Navbar/Navbar.module.css";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(prevState => !prevState);
+    setIsMenuOpen((prevState) => !prevState);
   };
 
   return (
     <nav className={Style.Navbar}>
-      <Image src={Logo} width={130} height={50} alt="Logo" />
-      
-      <div className={`${Style.navItems} ${isMenuOpen ? Style.active : ''}`}>
+      <Link href="/">
+        <Image src={Logo} width={130} height={50} alt="Logo" />
+      </Link>
+
+      <div className={`${Style.navItems} ${isMenuOpen ? Style.active : ""}`}>
         <ul>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>Before & After Gallery</li>
-          <li>Reviews</li>
-          <li>Locations</li>
-          <li>Blogs</li>
-          <li>Contact Us</li>
+          <li>
+            <span>About Us</span>
+            <ul>
+              <li>
+                <Link href="/davinder-bhela">Meet Our Doctor</Link>
+              </li>
+              <li>
+                <Link href="/about-us/our-pricing">Our Pricing</Link>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <Link href="/services">Services</Link>
+          </li>
+          <li>
+            <Link href="/before-after-gallery">Before & After Gallery</Link>
+          </li>
+          <li>
+            <Link href="/reviews">Reviews</Link>
+          </li>
+          <li>
+            <Link href="/locations">Locations</Link>
+          </li>
+          <li>
+            <Link href="/blogs">Blogs</Link>
+          </li>
+          <li>
+            <Link href="/contact-us">Contact Us</Link>
+          </li>
         </ul>
       </div>
 

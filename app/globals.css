@@ -32,7 +32,7 @@ button {
 }
 
 .gradientButton {
-  @apply py-4 px-8 rounded-full text-green-100;
+@apply py-2 md:py-3 lg:py-4 px-5 rounded-full text-green-100;
   background: linear-gradient(to right, #002856 60%, #5b9043 100%);
 }
 

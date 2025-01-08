@@ -1,68 +1,101 @@
 .Navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff; 
-    position: relative;
-  }
-  
-  .Navbar .navItems ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-  }
-  
-  .Navbar .navItems ul li {
-    font-size: 16px;
-    line-height: 19.9px;
-    cursor: pointer;
-    color: #101112;
-  }
-  
-  
-  .hamburger {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  position: relative;
+}
+
+.Navbar .navItems ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.Navbar .navItems ul li {
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+  color: #101112;
+  transition: 0.3s;
+  padding: 0 10px;
+}
+
+.Navbar .navItems ul li ul {
+  display: none;
+  flex-direction: column;
+  color: #007bff;
+}
+
+.Navbar .navItems ul li:hover {
+  border-bottom: 3px solid #538744;
+}
+.Navbar .navItems ul li ul {
+  margin-top: 3px;
+}
+
+.Navbar .navItems ul li:hover ul,
+.Navbar .navItems ul li ul:hover {
+  display: flex;
+  position: absolute;
+  background-color: #002856;
+  transform: translateX(-20%);
+  gap: 0;
+}
+
+.Navbar .navItems ul li ul li {
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.Navbar .navItems ul li ul li:hover {
+  background-color: #538744;
+  border: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+@media (max-width: 1024) {
+  .Navbar .navItems {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
     display: none;
     flex-direction: column;
-    gap: 4px;
-    cursor: pointer;
+    gap: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
-  
-  .bar {
-    width: 30px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 2px;
+
+  .Navbar .navItems.active {
+    display: flex;
   }
-  
-  @media (max-width: 768px) {
-    .Navbar .navItems {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      display: none;
-      flex-direction: column;
-      gap: 10px;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 1;
-    }
-  
-    .Navbar .navItems.active {
-      display: flex;
-    }
-  
-    .Navbar .navItems ul {
-      flex-direction: column;
-      gap: 10px;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .Navbar .hamburger {
-      display: flex;
-    }
+
+  .Navbar .navItems ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
   }
-  
+
+  .Navbar .hamburger {
+    display: flex;
+  }
+}

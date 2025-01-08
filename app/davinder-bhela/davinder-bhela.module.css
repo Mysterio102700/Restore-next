@@ -1,0 +1,39 @@
+.gradientContainer {
+  background: linear-gradient(to right, #002856 60%, #5b9043 100%);
+}
+
+.cardBg {
+  background-image: url("../Assets/meetOurDoctorCardsBg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.atRestoreWeGiveTime {
+  background-image: url("../Assets/atRestoreWeGiveTime.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.atRestoreWeGiveTime ul {
+  padding: 0 0 0 20px;
+}
+
+.atRestoreWeGiveTime ul li {
+  list-style-type: disc;
+  color: #afc6ec;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.socialMedia {
+  background: linear-gradient( #397754 30%, #0c58ae 100%);
+}
+
+@media (max-width: 768px) {
+  .atRestoreWeGiveTime {
+    background-position: center;
+  }
+}
