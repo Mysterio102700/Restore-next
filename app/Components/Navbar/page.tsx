@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import Logo from "@/app/Assets/logo.png";
 import Style from "@/app/Components/Navbar/Navbar.module.css";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,10 +23,10 @@ const Navbar = () => {
       <div className={`${Style.navItems} ${isMenuOpen ? Style.active : ""}`}>
         <ul>
           <li>
-            <span>About Us</span>
+            <span>About Us <FontAwesomeIcon className="ml-2" icon={faCaretDown} /></span>
             <ul>
               <li>
-                <Link href="/davinder-bhela">Meet Our Doctor</Link>
+                <Link href="/davinder-bhela">Meet Our Doctor </Link>
               </li>
               <li>
                 <Link href="/about-us/our-pricing">Our Pricing</Link>
@@ -50,7 +52,7 @@ const Navbar = () => {
             <Link href="/contact-us">Contact Us</Link>
           </li>
         </ul>
-      </div>
+      </div >
 
       <button className="gradientButton">Book Appointment</button>
 
@@ -59,7 +61,7 @@ const Navbar = () => {
         <span className={Style.bar}></span>
         <span className={Style.bar}></span>
       </div>
-    </nav>
+    </nav >
   );
 };
 

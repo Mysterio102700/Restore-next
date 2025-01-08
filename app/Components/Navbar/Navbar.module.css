@@ -32,6 +32,15 @@
 .Navbar .navItems ul li:hover {
   border-bottom: 3px solid #538744;
 }
+
+.Navbar .navItems ul li svg {
+  width: 7px;
+}
+
+.Navbar .navItems ul li:hover svg {
+  color: #538744;
+}
+
 .Navbar .navItems ul li ul {
   margin-top: 3px;
 }
