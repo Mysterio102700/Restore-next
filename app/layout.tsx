@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "@/app/Components/Navbar/page";
 import Footer from "@/app/Components/Footer/page"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/next';
+
 
 
 const poppins = Poppins({
@@ -30,6 +32,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <SpeedInsights />
+        <Analytics />
         <Footer />
       </body>
     </html>
