@@ -29,7 +29,7 @@ const Navbar = () => {
                 <Link href="/davinder-bhela">Meet Our Doctor </Link>
               </li>
               <li>
-                <Link href="/about-us/our-pricing">Our Pricing</Link>
+                <Link href="/our-pricing">Our Pricing</Link>
               </li>
             </ul>
           </li>

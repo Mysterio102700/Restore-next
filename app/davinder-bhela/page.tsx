@@ -298,7 +298,7 @@ const Page = () => {
                     </div>
                     <div className="flex justify-center items-center">
                         <button className="border text-[15px] leading-[15px] px-5 py-2 rounded-full font-medium text-white">
-                            View All Videoes
+                            View All Videos
                         </button>
                     </div>
                     <div className="row flex flex-col  md:flex-row justify-center items-center py-5 gap-5">
@@ -324,7 +324,7 @@ const Page = () => {
                     </div>
                     <div className="flex justify-center items-center">
                         <button className="border text-[15px] leading-[15px] px-5 py-2 rounded-full font-medium text-white">
-                            View All Videoes
+                            View All Videos
                         </button>
                     </div>
                 </div>
