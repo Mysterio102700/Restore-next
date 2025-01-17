@@ -3,7 +3,7 @@ import Styles from "@/app/our-pricing/our-pricing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import GradientButton from "@/app/Components/gradientButton/page";
+import GradientButton from "../Components/gradientButton/GradientButton";
 
 const page = () => {
   return (
@@ -678,7 +678,7 @@ const page = () => {
               Give Us a Call Today to Book an Appointment at Our Hicksville and
               Huntington Locations.
             </p>
-            <GradientButton text={"Book Appointment"} />
+            <GradientButton buttonText="Book Appointment" />
           </div>
         </div>
       </section>

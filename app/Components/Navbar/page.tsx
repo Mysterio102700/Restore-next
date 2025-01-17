@@ -6,7 +6,8 @@ import Style from "@/app/Components/Navbar/Navbar.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import GradientButton from "@/app/Components/gradientButton/page"
+import GradientButton from "../gradientButton/GradientButton";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +55,7 @@ const Navbar = () => {
           </li>
         </ul>
       </div >
-      <GradientButton text={"Book Appointment"}/>
+      <GradientButton buttonText="Book Appointment"/>
 
       <div className={Style.hamburger} onClick={toggleMenu}>
         <span className={Style.bar}></span>
