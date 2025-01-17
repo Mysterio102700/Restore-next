@@ -2,3 +2,26 @@
     background-color: #eaedf2;
     padding: 0 20px;
 }
+
+
+.orthoCard{
+    background-color: #dfebff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* height: 600px; */
+}
+
+.greenBanner{
+    background-image: url('../Assets/greenBanner.png');
+    background-size: cover;
+    background-position: center right;
+}
+
+
+@media only screen and (max-width:450px) {
+    .card,
+    .orthoCard{
+        height: 100%;
+    }
+}

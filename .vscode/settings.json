@@ -1,3 +1,4 @@
 {
-    "reactSnippets.settings.languageScopes": "typescript,typescriptreact,javascript,javascriptreact,css"
+    "reactSnippets.settings.languageScopes": "typescript,typescriptreact,javascript,javascriptreact,css",
+    "files.autoSave": "afterDelay"
 }
