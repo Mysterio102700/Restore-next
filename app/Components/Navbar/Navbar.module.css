@@ -69,6 +69,13 @@
   border: none;
 }
 
+.Navbar .navItems ul li ul li:hover ul
+.Navbar .navItems ul li ul li a:hover ul{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
