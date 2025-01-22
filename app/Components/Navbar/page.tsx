@@ -22,7 +22,7 @@ const Navbar = () => {
       </Link>
 
       <div className={`${Style.navItems} ${isMenuOpen ? Style.active : ""}`}>
-        <ul>
+          <ul>
           <li>
             <span>
               About Us <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
@@ -37,11 +37,13 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <Link href="/services">
-              <span>
-                Services <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
-              </span>
-            </Link>
+            <span>
+              <Link href="/services">
+                Services
+              </Link>
+              <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
+            </span>
+
             <ul>
               <li>
                 <Link href="/non-invasive-laser-therapies">
@@ -138,12 +140,13 @@ const Navbar = () => {
               </li>
               <li>
                 <Link href="/diabetic-foot-care">Diabetic Foot Care</Link>
+                <ul>
+                  <li>
+                    <Link href="/">Diabetic Neuropathy</Link>
+                  </li>
+                </ul>
               </li>
-              <ul>
-                <li>
-                  <Link href="">Diabetic Neuropathy</Link>
-                </li>
-              </ul>
+
               <li>
                 <Link href="/minimally-invasive-foot-surgery">
                   Minimally Invasive Foot Surgery
@@ -273,7 +276,7 @@ const Navbar = () => {
         <span className={Style.bar}></span>
       </div>
     </nav>
-    
+
   );
 };
 

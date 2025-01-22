@@ -1,10 +1,11 @@
 .Navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
   position: relative;
+  z-index: 1000;
 }
 
 .Navbar .navItems ul {
@@ -14,66 +15,66 @@
 }
 
 .Navbar .navItems ul li {
+  position: relative;
   font-size: 14px;
-  line-height: 19px;
   cursor: pointer;
-  color: #101112;
-  transition: 0.3s;
   padding: 0 10px;
-  border-bottom: 3px solid white;
   display: flex;
-  justify-content: center;
-  align-items: start;
-}
-
-.Navbar .navItems ul li ul {
-  display: none;
   flex-direction: column;
-  color: #007bff;
 }
 
-.Navbar .navItems ul li:hover {
-  border-bottom: 3px solid #538744;
-}
-
-.Navbar .navItems ul li svg {
-  width: 7px;
-}
-
-.Navbar .navItems ul li:hover svg {
-  color: #538744;
-}
-
-.Navbar .navItems ul li ul {
-  margin-top: 22px;
-}
-
-.Navbar .navItems ul li:hover ul,
-.Navbar .navItems ul li ul:hover {
-  display: flex;
+.Navbar .navItems ul li > ul {
+  display: none;
   position: absolute;
-  background-color: #002856;
+  top: 100%;
+  left: 0;
   gap: 0;
-  z-index: 1;
+  flex-direction: column;
+  background-color: #002856;
+  z-index: 10;
+  min-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.Navbar .navItems ul li ul li {
-  font-size: 14px;
+
+.Navbar .navItems ul li:hover > ul {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.Navbar .navItems ul li > ul > li {
   color: #fff;
   padding: 10px 20px;
-  border: none;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
 }
 
-.Navbar .navItems ul li ul li:hover {
+.Navbar .navItems ul li > ul > li:hover {
   background-color: #538744;
-  border: none;
 }
 
-.Navbar .navItems ul li ul li:hover ul
-.Navbar .navItems ul li ul li a:hover ul{
-  display: flex;
+.Navbar .navItems ul li > ul > li ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
   flex-direction: column;
-  position: relative;
+  background-color: #002856;
+  padding: 0;
+  z-index: 10;
+  min-width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.Navbar .navItems ul li > ul > li:hover > ul {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hamburger {
@@ -96,27 +97,49 @@
     top: 70px;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #002856;
     display: none;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
   }
 
   .Navbar .navItems.active {
     display: flex;
+    padding: 20px;
   }
 
   .Navbar .navItems ul {
     flex-direction: column;
+    align-items: start;
     gap: 10px;
     width: 100%;
-    text-align: center;
+    text-align: left;
+  }
+
+  .Navbar .navItems ul li {
+    padding: 10px;
+    color: #fff;
+    align-items: start;
+    text-align: left;
+    width: 100%;
   }
 
   .Navbar .hamburger {
     display: flex;
+  }
+
+  .Navbar .navItems ul li > ul {
+    position: relative;
+    display: none;
+    padding-left: 10px;
+  }
+
+  .Navbar .navItems ul li:hover > ul {
+    display: block;
   }
 }

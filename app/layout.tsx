@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins  } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/Components/Navbar/page";
-import Navbar1 from "@/app/Components/Navbar/Navbar";
 import Footer from "@/app/Components/Footer/page"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/next';
@@ -31,7 +30,6 @@ export default function RootLayout({
         className={`${poppins.variable} ${poppins.variable} antialiased`}
       >
         <Navbar />
-        <Navbar1 />
         {children}
         <SpeedInsights />
         <Analytics />
