@@ -1,6 +1,6 @@
 .Navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 10px 20px;
   background-color: #fff;
@@ -17,10 +17,20 @@
 .Navbar .navItems ul li {
   position: relative;
   font-size: 14px;
-  cursor: pointer;
-  padding: 0 10px;
+  line-height: 19px;
+  cursor: pointer;  
   display: flex;
   flex-direction: column;
+  color: #002856;
+}
+
+.Navbar .navItems ul li span {
+  border-bottom: 3px solid white;
+}
+
+.Navbar .navItems ul li:hover span {
+  color: #538744;
+  border-bottom: 4px solid #538744;
 }
 
 .Navbar .navItems ul li > ul {
@@ -37,7 +47,6 @@
   pointer-events: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 
 .Navbar .navItems ul li:hover > ul {
   display: flex;

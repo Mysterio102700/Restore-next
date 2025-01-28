@@ -23,8 +23,8 @@ const page = () => {
               height={133}
               className="rounded-md w-2/5 lg:w-1/4 h-auto"
             />
-            <h2 className="text-[#C8D7E3] text-[24px] md:text-[50px] md:leading-[60px] lg:text-[90px] leading-[28px] lg:leading-[110px] whitespace-pre">
-              RESTORE PODIATRY <br /> & LASER CENTER
+            <h2 className="text-[#C8D7E3] text-4xl
+             md:text-[50px] md:leading-[80px] lg:text-[70px] lg:leading-[109px] whitespace-pre">RESTORE PODIATRY <br /> & LASER CENTER
             </h2>
           </div>
         </div>

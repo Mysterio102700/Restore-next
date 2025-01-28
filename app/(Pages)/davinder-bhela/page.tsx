@@ -6,9 +6,10 @@ import Card1 from "@/app/Assets/treatingRootCause.png";
 import Card2 from "@/app/Assets/Experienced.png";
 import Card3 from "@/app/Assets/trust&Reliability.png";
 import Card4 from "@/app/Assets/nonInvasiveSolutions.png";
-import Styles from "@/app/davinder-bhela/davinder-bhela.module.css";
+import Styles from "./davinder-bhela.module.css";
 import dynamic from "next/dynamic";
-import BookAppointment from "@/app/Components/bookAppointment/page";
+import BeforeFooter from "@/app/Components/BeforeFooter/page";
+import GradientButton from "../../Components/gradientButton/GradientButton";
 
 const Page = () => {
     const InstagramEmbedNoSSR = dynamic(
@@ -20,10 +21,7 @@ const Page = () => {
     return (
         <>
             <div className="container mx-auto px-5 md:px-20 lg:px-30 2xl:px-52">
-                <div
-                    className="row flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 py-10 sm:py-5 md:py-7 xl:py-10 
-2xl:py-15"
-                >
+                <div className="row flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 py-10 sm:py-5 md:py-7 xl:py-10 2xl:py-15">
                     <div className="col lg:w-1/2 flex flex-col gap-5">
                         <h2>Meet Dr. Davinder Bhela</h2>
                         <p className="font-[16px] text-[#6e8aab]">
@@ -157,7 +155,7 @@ const Page = () => {
                         anesthesia, and without the use of any hardware.
                     </p>
 
-                    <button className="gradientButton border">Book Appointment</button>
+                    <GradientButton buttonText="" />
                 </div>
                 <div className={Styles.cardBg}>
                     <div className="row flex flex-col lg:flex-row gap-5 py-5">
@@ -328,7 +326,10 @@ const Page = () => {
                         </button>
                     </div>
                 </div>
-                <BookAppointment />
+
+            </div>
+            <div className="container mx-auto">
+                <BeforeFooter />
             </div>
         </>
     );

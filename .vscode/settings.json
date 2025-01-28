@@ -1,4 +1,12 @@
 {
     "reactSnippets.settings.languageScopes": "typescript,typescriptreact,javascript,javascriptreact,css",
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
+    "cSpell.words": [
+        "bhela",
+        "davinder",
+        "fasciitis",
+        "Hicksville",
+        "mangoose",
+        "Onyfix"
+    ]
 }

@@ -1,13 +1,14 @@
 import React from "react";
-import Styles from "@/app/our-pricing/our-pricing.module.css";
+import Styles from "./our-pricing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import GradientButton from "../Components/gradientButton/GradientButton";
+import GradientButton from "../../Components/gradientButton/GradientButton"; 
 
 const page = () => {
   return (
     <>
+
       <section className={Styles.ourPricing}>
         <div className="container mx-auto py-5">
           <h2 className="text-center">Our Pricing</h2>

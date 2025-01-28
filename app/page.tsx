@@ -1,8 +1,14 @@
+import React from 'react'
+import { AppProps } from 'next/app'
+import { ServiceProvider } from '@/app/context/ServiceContext'
 import Homepage from '@/app/Components/HomePage/page';
 
 
-export default function Home() {
+const page = ({ pageProps }: AppProps) => {
   return (
-    <Homepage />
-  );
+    <ServiceProvider>
+      <Homepage {...pageProps} />
+    </ServiceProvider>)
 }
+
+export default page;

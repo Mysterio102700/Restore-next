@@ -3,14 +3,14 @@
 }
 
 .cardBg {
-  background-image: url("../Assets/meetOurDoctorCardsBg.png");
+  background-image: url("../../Assets/meetOurDoctorCardsBg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .atRestoreWeGiveTime {
-  background-image: url("../Assets/atRestoreWeGiveTime.png");
+  background-image: url("../../Assets/atRestoreWeGiveTime.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Poppins  } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/Components/Navbar/page";
 import Footer from "@/app/Components/Footer/page"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/next';
+import { ServiceProvider } from "./context/ServiceContext";
 
 
 
@@ -25,16 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.variable} ${poppins.variable} antialiased`}
-      >
-        <Navbar />
-        {children}
-        <SpeedInsights />
-        <Analytics />
-        <Footer />
-      </body>
-    </html>
+    <ServiceProvider>
+      <html lang="en">
+        <body className={`${poppins.variable} ${poppins.variable} antialiased`}
+        >
+          <Navbar />
+          {children}
+          <SpeedInsights />
+          <Analytics />
+          <Footer />
+        </body>
+      </html>
+    </ServiceProvider>
   );
 }

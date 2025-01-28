@@ -1,11 +1,12 @@
-.bookAppointment {
+.BeforeFooter {
   background-image: url("../../Assets/Doctors-Bg.png");
   background-color: #002856;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 90%;
+  width: 65%;
   margin: 0 auto;
   padding: 30px 0;
   border-radius: 10px;
+
 }

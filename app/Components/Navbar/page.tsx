@@ -22,10 +22,10 @@ const Navbar = () => {
       </Link>
 
       <div className={`${Style.navItems} ${isMenuOpen ? Style.active : ""}`}>
-          <ul>
+        <ul>
           <li>
             <span>
-              About Us <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
+              About Us <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
             </span>
             <ul>
               <li>
@@ -39,191 +39,191 @@ const Navbar = () => {
           <li>
             <span>
               <Link href="/services">
-                Services
+                Our Services
               </Link>
-              <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
+              <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
             </span>
 
             <ul>
               <li>
-                <Link href="/non-invasive-laser-therapies">
+                <Link href="/services/non-invasive-laser-therapies">
                   Non Invasive Laser Therapies
                 </Link>
                 <ul>
                   <li>
-                    <Link href="/laser-therapy">Laser Therapy</Link>
+                    <Link href="/services/laser-therapy">Laser Therapy</Link>
                   </li>
                   <li>
-                    <Link href="/deep-tissue-laser-therapy">
+                    <Link href="/services/deep-tissue-laser-therapy">
                       Deep Tissue Laser Therapy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/class-2-laser-therapy">
+                    <Link href="/services/class-2-laser-therapy">
                       Class 2 Laser Therapy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/class-4-laser-therapy">
+                    <Link href="/services/class-4-laser-therapy">
                       Class 4 Laser Therapy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/low-level-laser-therapy">
+                    <Link href="/services/low-level-laser-therapy">
                       Low-Level Laser Therapy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/high-power-laser-therapy">
+                    <Link href="/services/high-power-laser-therapy">
                       High Power Laser Therapy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/high-intensity-laser-therapy">
+                    <Link href="/services/high-intensity-laser-therapy">
                       High-Intensity Laser Therapy (HILT)
                     </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link href="/common-foot-ankle-problems">
+                <Link href="/services/common-foot-ankle-problems">
                   Common Foot and Ankle Problems
                 </Link>
                 <ul>
                   <li>
-                    <Link href="/plantar-fasciitis">Plantar Fasciitis</Link>
+                    <Link href="/services/plantar-fasciitis">Plantar Fasciitis</Link>
                   </li>
                   <li>
-                    <Link href="/toenail-fungus">Toenail Fungus</Link>
+                    <Link href="/services/toenail-fungus">Toenail Fungus</Link>
                   </li>
                   <li>
-                    <Link href="/flatfoot">Flatfoot</Link>
+                    <Link href="/services/flatfoot">Flatfoot</Link>
                   </li>
                   <li>
-                    <Link href="/achilles-tendon">Achilles Tendon</Link>
+                    <Link href="/services/achilles-tendon">Achilles Tendon</Link>
                   </li>
                   <li>
-                    <Link href="/bunions">Bunions</Link>
+                    <Link href="/services/bunions">Bunions</Link>
                   </li>
                   <li>
-                    <Link href="/chemotherapy-induced-neuropathy">
+                    <Link href="/services/chemotherapy-induced-neuropathy">
                       Chemotherapy Induced Neuropathy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/foot-arthritis">Foot Arthritis</Link>
+                    <Link href="/services/foot-arthritis">Foot Arthritis</Link>
                   </li>
                   <li>
-                    <Link href="/foot-numbness">Foot Numbness</Link>
+                    <Link href="/services/foot-numbness">Foot Numbness</Link>
                   </li>
                   <li>
-                    <Link href="/hammertoe">Hammertoe</Link>
+                    <Link href="/services/hammertoe">Hammertoe</Link>
                   </li>
                   <li>
-                    <Link href="/heel-pain">Heel Pain</Link>
+                    <Link href="/services/heel-pain">Heel Pain</Link>
                   </li>
                   <li>
-                    <Link href="/idiopathic-neuropathy">
+                    <Link href="/services/idiopathic-neuropathy">
                       Idiopathic Neuropathy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/ingrown-toenails">Ingrown Toenails</Link>
+                    <Link href="/services/ingrown-toenails">Ingrown Toenails</Link>
                   </li>
                   <li>
-                    <Link href="/neuroma">Neuroma</Link>
+                    <Link href="/services/neuroma">Neuroma</Link>
                   </li>
                   <li>
-                    <Link href="/plantar-wart">Plantar Wart</Link>
+                    <Link href="/services/plantar-wart">Plantar Wart</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link href="/diabetic-foot-care">Diabetic Foot Care</Link>
+                <Link href="/services/diabetic-foot-care">Diabetic Foot Care</Link>
                 <ul>
                   <li>
-                    <Link href="/">Diabetic Neuropathy</Link>
+                    <Link href="/services/">Diabetic Neuropathy</Link>
                   </li>
                 </ul>
               </li>
 
               <li>
-                <Link href="/minimally-invasive-foot-surgery">
+                <Link href="/services/minimally-invasive-foot-surgery">
                   Minimally Invasive Foot Surgery
                 </Link>
               </li>
               <li>
-                <Link href="/non-invasive-shockwave-therapies">
+                <Link href="/services/non-invasive-shockwave-therapies">
                   Non Invasive Shockwave Therapies
                 </Link>
                 <ul>
                   <li>
-                    <Link href="/focused-shockwave-therapy">
+                    <Link href="/services/focused-shockwave-therapy">
                       Focused Shockwave Therapy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/radial-shockwave-therapy">
+                    <Link href="/services/radial-shockwave-therapy">
                       Radial Shockwave Therapy
                     </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link href="/non-surgical-treatment-ingrown-toenails">
+                <Link href="/services/non-surgical-treatment-ingrown-toenails">
                   Non Surgical Treatment for Ingrown Toenails
                 </Link>
                 <ul>
                   <li>
-                    <Link href="">Onyfix Treatment</Link>
+                    <Link href="/services">Onyfix Treatment</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link href="/regenerative-medicine">Regenerative Medicine</Link>
+                <Link href="/services/regenerative-medicine">Regenerative Medicine</Link>
               </li>
               <li>
-                <Link href="/biologic-regenerative-injection">
+                <Link href="/services/biologic-regenerative-injection">
                   Biologic Regenerative Injection
                 </Link>
               </li>
               <li>
-                <Link href="/restore-exclusive-program">
+                <Link href="/services/restore-exclusive-program">
                   Restore Exclusive Program
                 </Link>
                 <ul>
                   <li>
-                    <Link href="/clear-nail-program">
+                    <Link href="/services/clear-nail-program">
                       Clear Nail Programs <sup>TM</sup>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/clear-wart-program">
+                    <Link href="/services/clear-wart-program">
                       Clear Wart Program<sup>TM</sup>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/custom-3d-printed-orthotics">
+                    <Link href="/services/custom-3d-printed-orthotics">
                       Custom 3D Printed Orthotics
                     </Link>
                   </li>
                   <li>
-                    <Link href="/power-heel-program">
+                    <Link href="/services/power-heel-program">
                       Power Heel Program<sup>TM</sup>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/smart-neuropathy-program">
+                    <Link href="/services/smart-neuropathy-program">
                       Smart Neuropathy Program
                     </Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <Link href="/sports-injury">Sports Injury</Link>
+                <Link href="/services/sports-injury">Sports Injury</Link>
               </li>
               <li>
-                <Link href="/swift-microwave-immunotherapy">
+                <Link href="/services/swift-microwave-immunotherapy">
                   Swift Microwave Immunotherapy
                 </Link>
               </li>
@@ -232,23 +232,23 @@ const Navbar = () => {
           <li>
             <span>
               Before & After Gallery{" "}
-              <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
+              <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
             </span>
             <ul>
               <li>
                 <Link href="">Plantar wart Treatment Results</Link>
               </li>
               <li>
-                <Link href="">Toenail Fungus Treatrnent Results</Link>
+                <Link href="">Toenail Fungus Treatment Results</Link>
               </li>
             </ul>
           </li>
           <li>
-            <Link href="/reviews">Reviews</Link>
+            <Link href="/reviews"><span>Reviews</span></Link>
           </li>
           <li>
             <span>
-              Locations <FontAwesomeIcon className="ml-2" icon={faCaretDown} />
+              Locations <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
             </span>
 
             <ul>
@@ -261,13 +261,13 @@ const Navbar = () => {
             </ul>
           </li>
           <li>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="/blogs"><span>Blogs</span></Link>
           </li>
           <li>
-            <Link href="/contact-us">Contact Us</Link>
+            <Link href="/contact-us"><span>Contact Us</span></Link>
           </li>
         </ul>
-      </div>
+      </div >
       <GradientButton buttonText="Book Appointment" />
 
       <div className={Style.hamburger} onClick={toggleMenu}>
@@ -275,7 +275,7 @@ const Navbar = () => {
         <span className={Style.bar}></span>
         <span className={Style.bar}></span>
       </div>
-    </nav>
+    </nav >
 
   );
 };

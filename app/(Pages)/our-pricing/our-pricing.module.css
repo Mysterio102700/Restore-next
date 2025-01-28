@@ -13,7 +13,7 @@
 }
 
 .greenBanner{
-    background-image: url('../Assets/greenBanner.png');
+    background-image: url('../../Assets/greenBanner.png');
     background-size: cover;
     background-position: center right;
 }

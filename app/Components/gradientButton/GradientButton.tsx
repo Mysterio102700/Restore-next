@@ -7,6 +7,9 @@ interface GradientButtonProps {
 }
 
 const GradientButton: React.FC<GradientButtonProps> = ({buttonText}) => {
+  if (!buttonText) {
+    buttonText = "Book Appointment"
+  }
   return (
      <button className={Styles.gradientButton}>{buttonText}</button>
   )
