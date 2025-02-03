@@ -16,7 +16,7 @@
 }
 
 h2 {
-  @apply font-semibold text-[46px] leading-[56.17px] text-left text-[#194F8C] capitalize;
+  @apply font-medium text-[46px] leading-[56.17px] text-left text-[#194F8C] capitalize;
 }
 
 h3 {

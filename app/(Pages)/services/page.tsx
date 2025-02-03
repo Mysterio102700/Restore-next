@@ -1,26 +1,15 @@
 'use client'
 import Link from 'next/link'
-import React, { FC, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from './Services.module.css';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import BeforeFooter from '@/app/Components/BeforeFooter/page';
 import { AxiosInstance } from '@/app/api/AxiosInstances/AxiosInstances';
-import { useService } from '@/app/context/ServiceContext';
-
-interface Service {
-  title: string;
-  url: string;
-  img: StaticImageData;
-}
-
-interface ServiceListProps {
-  services: Service[];
-}
-
-const page: FC<ServiceListProps> = ({ services }) => {
+import { generateSlug } from '@/app/Components/GenerateSlug/GenerateSlug';
+import { Service } from "@/app/models/servicesPageModels"
 
 
-
+const Page = () => {
 
   const [serviceData, setServiceData] = useState<Service[]>([]);
 
@@ -28,8 +17,7 @@ const page: FC<ServiceListProps> = ({ services }) => {
     const handleServiceData = async () => {
       try {
         const response = await AxiosInstance.get('/services');
-        const data = response.data;
-        setServiceData(data);
+        setServiceData(response.data);
       } catch (error) {
         console.log(error);
       }
@@ -44,9 +32,10 @@ const page: FC<ServiceListProps> = ({ services }) => {
       <h2 className='py-10 text-center'>Our Services</h2>
       <div className="row flex flex-wrap items-center justify-center gap-8">
         {serviceData.map((service, index) => (
-          <Link href={`services/${(service.title).replace(/[\n\s]+/g, '-').replace(/[^a-zA-Z0-9-]/g, '').replace(/-+/g, '-').toLowerCase()}`}
+          <Link href={`services/${generateSlug(service.title)}`}
             key={index}
             className="col w-full md:w-1/4 flex"
+            onClick={() => sessionStorage.setItem("serviceName", (service.title).replace(/[\n\s]+/g, ' '))}
 
           >
             <div className={`${Styles.card} flex flex-col items-center justify-between h-full`}>
@@ -69,4 +58,4 @@ const page: FC<ServiceListProps> = ({ services }) => {
   )
 }
 
-export default page;
+export default Page;

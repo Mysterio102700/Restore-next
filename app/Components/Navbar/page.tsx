@@ -1,12 +1,20 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "@/app/Assets/logo.png";
 import Style from "@/app/Components/Navbar/Navbar.module.css";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import GradientButton from "../gradientButton/GradientButton";
+import { AxiosInstance } from "@/app/api/AxiosInstances/AxiosInstances";
+import { generateSlug } from "../GenerateSlug/GenerateSlug";
+
+import {
+  Service,
+  subSubService
+} from '@/app/models/servicesPageModels'
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,6 +22,31 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
+
+
+  const [serviceData, setServiceData] = useState<Service[]>([]);
+  const [subSubServiceDetails, setSubSubServiceDetails] = useState<subSubService[]>([]);
+  const [selectedServiceName, setSelectedServiceName] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [servicesResponse, subServicesResponse] = await Promise.all([
+          AxiosInstance.get('/services'),
+          AxiosInstance.get('/services/subServices/subSubServices')
+        ]);
+
+        setServiceData(servicesResponse.data);
+        setSubSubServiceDetails(subServicesResponse.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
 
   return (
     <nav className={Style.Navbar}>
@@ -39,196 +72,43 @@ const Navbar = () => {
           <li>
             <span>
               <Link href="/services">
-                Our Services
+                Api Services
               </Link>
               <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
             </span>
-
             <ul>
-              <li>
-                <Link href="/services/non-invasive-laser-therapies">
-                  Non Invasive Laser Therapies
-                </Link>
-                <ul>
-                  <li>
-                    <Link href="/services/laser-therapy">Laser Therapy</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/deep-tissue-laser-therapy">
-                      Deep Tissue Laser Therapy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/class-2-laser-therapy">
-                      Class 2 Laser Therapy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/class-4-laser-therapy">
-                      Class 4 Laser Therapy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/low-level-laser-therapy">
-                      Low-Level Laser Therapy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/high-power-laser-therapy">
-                      High Power Laser Therapy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/high-intensity-laser-therapy">
-                      High-Intensity Laser Therapy (HILT)
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/services/common-foot-ankle-problems">
-                  Common Foot and Ankle Problems
-                </Link>
-                <ul>
-                  <li>
-                    <Link href="/services/plantar-fasciitis">Plantar Fasciitis</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/toenail-fungus">Toenail Fungus</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/flatfoot">Flatfoot</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/achilles-tendon">Achilles Tendon</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/bunions">Bunions</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/chemotherapy-induced-neuropathy">
-                      Chemotherapy Induced Neuropathy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/foot-arthritis">Foot Arthritis</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/foot-numbness">Foot Numbness</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/hammertoe">Hammertoe</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/heel-pain">Heel Pain</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/idiopathic-neuropathy">
-                      Idiopathic Neuropathy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/ingrown-toenails">Ingrown Toenails</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/neuroma">Neuroma</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/plantar-wart">Plantar Wart</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/services/diabetic-foot-care">Diabetic Foot Care</Link>
-                <ul>
-                  <li>
-                    <Link href="/services/">Diabetic Neuropathy</Link>
-                  </li>
-                </ul>
-              </li>
+              {serviceData.map((service, index) => (
+                <li key={index} onMouseEnter={() => setSelectedServiceName(service.title.replace(/[\n\s]+/g, ' '))}
+                  onMouseLeave={() => setSelectedServiceName(null)}
+                  onClick={() => {
+                    setSelectedServiceName(service.title.replace(/[\n\s]+/g, ' '));
+                    sessionStorage.setItem("serviceName", (service.title).replace(/[\n\s]+/g, ' '))
+                  }}>
+                  <Link
+                    href={`/services/${generateSlug(service.title)}`}
 
-              <li>
-                <Link href="/services/minimally-invasive-foot-surgery">
-                  Minimally Invasive Foot Surgery
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/non-invasive-shockwave-therapies">
-                  Non Invasive Shockwave Therapies
-                </Link>
-                <ul>
-                  <li>
-                    <Link href="/services/focused-shockwave-therapy">
-                      Focused Shockwave Therapy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/radial-shockwave-therapy">
-                      Radial Shockwave Therapy
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/services/non-surgical-treatment-ingrown-toenails">
-                  Non Surgical Treatment for Ingrown Toenails
-                </Link>
-                <ul>
-                  <li>
-                    <Link href="/services">Onyfix Treatment</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/services/regenerative-medicine">Regenerative Medicine</Link>
-              </li>
-              <li>
-                <Link href="/services/biologic-regenerative-injection">
-                  Biologic Regenerative Injection
-                </Link>
-              </li>
-              <li>
-                <Link href="/services/restore-exclusive-program">
-                  Restore Exclusive Program
-                </Link>
-                <ul>
-                  <li>
-                    <Link href="/services/clear-nail-program">
-                      Clear Nail Programs <sup>TM</sup>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/clear-wart-program">
-                      Clear Wart Program<sup>TM</sup>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/custom-3d-printed-orthotics">
-                      Custom 3D Printed Orthotics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/power-heel-program">
-                      Power Heel Program<sup>TM</sup>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/services/smart-neuropathy-program">
-                      Smart Neuropathy Program
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/services/sports-injury">Sports Injury</Link>
-              </li>
-              <li>
-                <Link href="/services/swift-microwave-immunotherapy">
-                  Swift Microwave Immunotherapy
-                </Link>
-              </li>
+                  >
+                    {service.title}
+                  </Link>
+                  <ul>
+                    {
+                      subSubServiceDetails
+                        .filter((subSubService) => subSubService.subService === selectedServiceName)
+                        .map((subSubService, index) => (
+                          <li key={index}>
+                            <Link href={`/services/${generateSlug(service.title)}/${generateSlug(subSubService.title)}`}>
+                              {subSubService.title}
+                            </Link>
+                          </li>
+                        ))
+                    }
+                  </ul>
+                </li>
+
+              ))}
             </ul>
           </li>
+
           <li>
             <span>
               Before & After Gallery{" "}

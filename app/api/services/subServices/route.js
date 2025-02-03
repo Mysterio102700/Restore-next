@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import connect from "@/app/lib/db";
-import { subService } from "@/app/lib/models/ourServices";
+import { subService } from "@/app/models/ourServices";
 
 export async function GET() {
   await connect();
@@ -8,7 +8,7 @@ export async function GET() {
   return NextResponse.json(subServices, { status: 200 });
 }
 
-export async function POST(req: NextRequest) {
+export async function POST(req) {
   await connect();
   const requestData = await req.json();
   const newSubService = new subService(requestData);

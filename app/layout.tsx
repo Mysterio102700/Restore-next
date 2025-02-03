@@ -5,14 +5,13 @@ import Navbar from "@/app/Components/Navbar/page";
 import Footer from "@/app/Components/Footer/page"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/next';
-import { ServiceProvider } from "./context/ServiceContext";
 
 
 
 const poppins = Poppins({
-  variable: "--font-poppins-regular",
+  variable: "--font-poppins",
   subsets: ['latin', 'latin-ext'],
-  weight: "400"
+  weight: ["400", "500", "700"]
 });
 
 export const metadata: Metadata = {
@@ -26,17 +25,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ServiceProvider>
-      <html lang="en">
-        <body className={`${poppins.variable} ${poppins.variable} antialiased`}
-        >
-          <Navbar />
-          {children}
-          <SpeedInsights />
-          <Analytics />
-          <Footer />
-        </body>
-      </html>
-    </ServiceProvider>
+    <html lang="en">
+      <body className={`${poppins.variable} ${poppins.variable} antialiased`}
+      >
+        <Navbar />
+        {children}
+        <SpeedInsights />
+        <Analytics />
+        <Footer />
+      </body>
+    </html>
   );
 }

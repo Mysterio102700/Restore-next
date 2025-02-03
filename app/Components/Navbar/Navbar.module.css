@@ -18,7 +18,7 @@
   position: relative;
   font-size: 14px;
   line-height: 19px;
-  cursor: pointer;  
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   color: #002856;
@@ -98,6 +98,9 @@
   height: 4px;
   background-color: #333;
   border-radius: 2px;
+}
+.menuIcon {
+  display: none;
 }
 
 @media (max-width: 1024px) {

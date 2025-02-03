@@ -1,6 +1,10 @@
 module.exports = {
-    images: {
-      domains: ['restorepodiatry.com'],
-    },
-  };
-  
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "restorepodiatry.com",
+      },
+    ],
+  },
+};
