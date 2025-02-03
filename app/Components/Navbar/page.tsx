@@ -72,7 +72,7 @@ const Navbar = () => {
           <li>
             <span>
               <Link href="/services">
-                Api Services
+                Our Services
               </Link>
               <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
             </span>
