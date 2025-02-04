@@ -15,7 +15,7 @@ export async function GET(req, context) {
       );
     }
 
-    const serviceData = await subService.find({ title: subServicesName });
+    const serviceData = await subService.findOne({ title: subServicesName });
 
     if (!serviceData || serviceData.length === 0) {
       return NextResponse.json(
