@@ -7,7 +7,8 @@ import Custom from "@/app/Assets/services/3D-Printed-Custom-Orthotics.png";
 import Laser from "@/app/Assets/services/Laser-Treatment-for-Plantar-Fasciitis.png";
 import Hypocure from "@/app/Assets/services/Hyprocure-Procedure-for-Pronated-Flat-Feet.png";
 import Image from "next/image";
-import Styles from "@/app/Components/HomePage/HomePage.module.css";
+import Styles from "@/app/(Pages)/HomePage/HomePage.module.css";
+import GradientButton from "@/app/Components/gradientButton/GradientButton";
 
 const Container4 = () => {
   const services = [
@@ -22,7 +23,7 @@ const Container4 = () => {
 
   return (
     <section className="container4">
-      <div className="container mx-auto px-4 flex justify-center items-center flex-col">
+      <div className="container mx-auto px-4 flex justify-center items-center flex-col gap-5">
         <h2 className="py-5 heading-2">Our services</h2>
         <div className={Styles.services}>
           {services.map((service, index) => (
@@ -35,7 +36,7 @@ const Container4 = () => {
             </div>
           ))}
         </div>
-        <button className="gradientButton my-5">View All Services</button>
+        <GradientButton buttonText="View All Services" />
       </div>
     </section>
   );
