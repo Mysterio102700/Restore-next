@@ -23,7 +23,22 @@ const SubSubServiceSchema = new mongoose.Schema({
       BenefitDescription: { type: String },
     },
   ],
+  SymptomImg: { type: String },
+  SymptomsDescription:{ type: String },
+  Causes: [
+    {
+      Causes: { type: String},
+      CausesDescription:{ type: String },
+    }
+  ],
+  Work: [
+    {
+      Work: { type: String },
+      WorkDescription: { type: String },
+    }
+  ]
 });
+
 
 const SubServiceSchema = new mongoose.Schema({
   title: { type: String, required: true },

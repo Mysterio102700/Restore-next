@@ -20,7 +20,7 @@ const Page = () => {
     );
     return (
         <>
-            <div className="container mx-auto px-5 md:px-20 lg:px-30 2xl:px-52">
+            <div className="container mx-auto">
                 <div className="row flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 py-10 sm:py-5 md:py-7 xl:py-10 2xl:py-15">
                     <div className="col lg:w-1/2 flex flex-col gap-5">
                         <h2>Meet Dr. Davinder Bhela</h2>
@@ -39,10 +39,10 @@ const Page = () => {
                         <table className="w-full border-collapse table-fixed">
                             <tbody>
                                 <tr>
-                                    <td className="w-2/5 border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="w-2/5 border-b border-black px-4 py-4 text-[19px] text-[#012957] break-words">
                                         UNDERGRADUATE
                                     </td>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[16px] text-[#012957] break-words">
                                         <ul className="list-disc pl-5">
                                             <li>
                                                 New York Institute of Technology – Bachelor in Life
@@ -52,10 +52,10 @@ const Page = () => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[19px] text-[#012957] break-words">
                                         GRADUATE
                                     </td>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[16px] text-[#012957] break-words">
                                         <ul className="list-disc pl-5">
                                             <li>
                                                 New York College of Podiatric Medicine – Doctor Of
@@ -65,10 +65,10 @@ const Page = () => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[19px] text-[#012957] break-words">
                                         POST DOCTORAL TRAINING
                                     </td>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[16px] text-[#012957] break-words">
                                         {" "}
                                         <ul className="list-disc pl-5">
                                             <li>New York Kingsbrook Jewish Medical Center </li>
@@ -76,10 +76,10 @@ const Page = () => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[19px] text-[#012957] break-words">
                                         CERTIFICATIONS/LICENSE/SPECIALTY DEGREE
                                     </td>
-                                    <td className="border-b border-black px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="border-b border-black px-4 py-4 text-[16px] text-[#012957] break-words">
                                         {" "}
                                         <ul className="list-disc pl-5">
                                             <li>Diplomate – American Board of Podiatric Medicine </li>
@@ -87,10 +87,10 @@ const Page = () => {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="px-4 py-4 text-[19px] text-[#012957] break-words">
                                         AFFILIATIONS
                                     </td>
-                                    <td className="px-4 py-4 font-[16px] text-[#012957] break-words">
+                                    <td className="px-4 py-4 text-[16px] text-[#012957] break-words">
                                         <ul className="list-disc pl-5">
                                             <li>American Board of Aesthetic Medicine</li>
                                             <li>
@@ -107,8 +107,8 @@ const Page = () => {
                         <Image src={Doctor} alt="Doctor" />
                     </div>
                 </div>
-                <div className="row flex flex-col gap-5 mx-0 2xl:mx-40">
-                    <p className="font-[20px] text-[#6e8aab]">
+                <div className="row flex flex-col gap-5 mx-0 2xl:mx-32">
+                    <p className="text-[20px] text-[#6e8aab]">
                         Dr. Bhela is one of the few board certified podiatrists in the
                         country who combines natural treatment, regenerative medicine
                         treatment, laser medicine, and sports medicine. The attraction of
@@ -265,34 +265,38 @@ const Page = () => {
                         </div>
                         <div className="col w-full md:w-1/4 h-px mr-0 lg:mr-10 bg-gray-300"></div>
                     </div>
-                    <div className="flex flex-col flex-wrap lg:flex-row justify-between gap-5  py-5">
-                        <iframe
-                            className="w-auto"
-                            height="200px"
-                            src="https://www.youtube.com/embed/UQytoPV4hGA?si=1DTq9bKiI8fnD0yZ"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                        ></iframe>
-                        <iframe
-                            className="w-auto"
-                            height="200px"
-                            src="https://www.youtube.com/embed/VABeKWIPVHU?si=6_rmtVY7YoDyXbWD"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                        ></iframe>
-                        <iframe
-                            className="w-auto"
-                            height="200px"
-                            src="https://www.youtube.com/embed/Ik0EEfxnEmI?si=ZOKevZ5fOEuyAzQX"
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin"
-                            allowFullScreen
-                        ></iframe>
+                    <div className="flex flex-col md:flex-row justify-between py-5 gap-5">
+                        <div className="w-full md:w-5/12 lg:1/3 relative aspect-video">
+                            <iframe
+                                className="absolute left-0 top-0 w-full h-full"
+                                src="https://www.youtube.com/embed/UQytoPV4hGA?si=1DTq9bKiI8fnD0yZ"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                        <div className="w-full md:w-5/12 lg:1/3 relative aspect-video">
+
+                            <iframe
+                                className="absolute left-0 top-0 w-full h-full"
+                                src="https://www.youtube.com/embed/VABeKWIPVHU?si=6_rmtVY7YoDyXbWD"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                        <div className="w-full md:w-5/12 lg:1/3 relative aspect-video">
+                            <iframe
+                                className="absolute left-0 top-0 w-full h-full"
+                                src="https://www.youtube.com/embed/Ik0EEfxnEmI?si=ZOKevZ5fOEuyAzQX"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerPolicy="strict-origin-when-cross-origin"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     </div>
                     <div className="flex justify-center items-center">
                         <button className="border text-[15px] leading-[15px] px-5 py-2 rounded-full font-medium text-white">

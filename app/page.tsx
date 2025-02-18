@@ -1,5 +1,6 @@
 import React from 'react'
-import Homepage from '@/app/Components/HomePage/page';
+import Homepage from '@/app/(Pages)/HomePage/page';
+
 
 
 const page = () => {

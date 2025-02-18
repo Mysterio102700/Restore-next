@@ -154,4 +154,17 @@
   .Navbar .navItems ul li:hover > ul {
     display: block;
   }
+
+  .Navbar .navItems ul li span {
+    border-bottom: none;
+  }
+
+  .Navbar .navItems ul li > ul > li ul {
+    position: relative;
+    left: 0;
+  }
+
+  .Navbar .navItems ul li > ul > li:hover {
+    background-color: none;
+  }
 }

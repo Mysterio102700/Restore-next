@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "@/app/Components/HomePage/HomePage.module.css";
+import Styles from "@/app/(Pages)/HomePage/HomePage.module.css";
 
 const container3 = () => {
   return (

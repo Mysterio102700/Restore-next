@@ -82,7 +82,6 @@ const Navbar = () => {
                   onMouseLeave={() => setSelectedServiceName(null)}
                   onClick={() => {
                     setSelectedServiceName(service.title.replace(/[\n\s]+/g, ' '));
-                    sessionStorage.setItem("serviceName", (service.title).replace(/[\n\s]+/g, ' '))
                   }}>
                   <Link
                     href={`/services/${generateSlug(service.title)}`}
@@ -127,9 +126,9 @@ const Navbar = () => {
             <Link href="/reviews"><span>Reviews</span></Link>
           </li>
           <li>
-            <span>
+            <Link href="/locations"><span>
               Locations <FontAwesomeIcon className="ml-2" width={20} icon={faCaretDown} />
-            </span>
+            </span></Link>
 
             <ul>
               <li>

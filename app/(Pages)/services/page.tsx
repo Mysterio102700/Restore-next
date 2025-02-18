@@ -19,7 +19,7 @@ const Page = () => {
         const response = await AxiosInstance.get('/services');
         setServiceData(response.data);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       }
     }
 
@@ -35,12 +35,10 @@ const Page = () => {
           <Link href={`services/${generateSlug(service.title)}`}
             key={index}
             className="col w-full md:w-1/4 flex"
-            onClick={() => sessionStorage.setItem("serviceName", (service.title).replace(/[\n\s]+/g, ' '))}
-
           >
             <div className={`${Styles.card} flex flex-col items-center justify-between h-full`}>
               <Image
-                className='max-w-[60%] mb-4'
+                className='max-w-[70%] mb-4'
                 src={service.img}
                 alt={service.title}
                 width={500}

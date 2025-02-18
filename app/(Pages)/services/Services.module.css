@@ -1,10 +1,4 @@
 .card {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-color: #f5f5f5;
   background-image: url("../../Assets/services/servicesCardBg.png");
   background-size: cover;

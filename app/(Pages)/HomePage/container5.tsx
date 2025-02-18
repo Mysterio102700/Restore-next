@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import AdvanceImg from "@/app/Assets/Advanced-World-Top-Technology.png";
-import Styles from "@/app/Components/HomePage/HomePage.module.css";
+import Styles from "@/app/(Pages)/HomePage/HomePage.module.css";
 
 const container5 = () => {
   return (
     <>
-      <section className="continer5">
+      <section className="container5 py-10">
         <div className="container mx-auto px-4">
           <div className="row flex flex-col lg:flex-row">
             <div className="col w-full lg:w-1/2 ${Styles.AdvanceImg}">

@@ -259,7 +259,7 @@
   justify-content: center;
   align-items: start;
   background-repeat: no-repeat;
-  padding-bottom: 2%;
+  margin: auto;
 }
 
 .doctorImage {
@@ -283,12 +283,13 @@
   .doctorImage {
     max-width: 100%;
     bottom: 0;
+
   }
 
   .doctorImage img {
     width: 70%;
     height: 100%;
     border: 5px solid #ffffff;
-    margin-top: 10%;
+    margin-top: 0;
   }
 }

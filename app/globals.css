@@ -38,14 +38,18 @@ button {
 
 .slick-prev:before,
 .slick-next:before {
-  color: black !important;
+  @apply !text-black;
 }
 
 .slick-prev:before {
-  margin: 15px;
+  @apply m-4
 }
 .slick-next:before {
-  margin: -15px;
+  @apply -m-4
+}
+
+.container {
+  @apply !max-w-[1300px] w-full mx-auto px-5;
 }
 
 @media only screen and (max-width: 450px) {
@@ -57,11 +61,11 @@ button {
   }
 
   p {
-    @apply text-[12px] leading-[20.51px];
+    @apply text-[14px] leading-[20.51px];
   }
 
   button {
-    @apply text-[12px] leading-[20.51px];
+    @apply text-[14px] leading-[20.51px];
   }
 }
 

@@ -26,15 +26,23 @@ interface Benefit {
   BenefitDescription: string;
 }
 
+interface Causes {
+  Causes: string;
+  CausesDescription: string;
+}
+
 interface subSubService {
   img: string;
   title: string;
   titleDesc: string;
   description: string;
   subService: string;
+  SymptomImg: string,
+  SymptomsDescription: string,
   keyComponentImg: string;
   keyComponents: KeyComponent[];
   benefits: Benefit[];
+  Causes: Causes[];
 }
 
 export type {
@@ -44,4 +52,5 @@ export type {
   KeyComponent,
   Benefit,
   subSubService,
+  Causes
 };

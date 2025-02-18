@@ -3,13 +3,13 @@ import Styles from "./our-pricing.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import GradientButton from "../../Components/gradientButton/GradientButton"; 
+import GradientButton from "../../Components/gradientButton/GradientButton";
 
 const page = () => {
   return (
     <>
 
-      <section className={Styles.ourPricing}>
+      <section className="bg-gray-200 ">
         <div className="container mx-auto py-5">
           <h2 className="text-center">Our Pricing</h2>
           <h3 className="text-[#194F8C] text-[28px] text-center">
@@ -30,7 +30,7 @@ const page = () => {
               We accept cash, checks, credit/debit card, HSA/FSA card.
             </p>{" "}
           </div>
-          <div className="row flex flex-col md:flex-row gap-5 rounded-2xl py-5 mx-auto lg:mx-30 2xl:mx-48">
+          <div className="row flex flex-col md:flex-row gap-5 rounded-2xl py-5 mx-auto">
             <div className={`col w-full md:w-1/3 bg-white p-5 rounded-lg`}>
               <h4 className="text-xl text-[#0365A6] font-semibold">
                 New Patient Appointment
@@ -139,12 +139,12 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="row flex flex-col gap-5 bg-white rounded-2xl p-5 mx-auto lg:mx-30 2xl:mx-48">
+          <div className="row flex flex-col gap-5 bg-white rounded-2xl p-5 shadow-sm mx-auto">
             <h4 className="text-3xl text-[#0365A6] font-semibold text-center">
               Ingrown Toenail Treatment
             </h4>
             <div className="flex flex-col md:flex-row  gap-5">
-              <div className={`col w-full md:w-1/3 ${Styles.orthoCard}`}>
+              <div className="col w-full md:w-1/3 bg-blue-100 rounded-xl p-5">
                 <h4 className="text-xl text-[#0365A6] font-semibold">
                   Option 1: <br />
                   Partial Nail Avulsion
@@ -195,7 +195,7 @@ const page = () => {
                   </div>
                 </div>
               </div>
-              <div className={`col w-full md:w-1/3 ${Styles.orthoCard}`}>
+              <div className="col w-full md:w-1/3 bg-blue-100 rounded-2xl p-5 shadow-sm">
                 <h4 className="text-xl text-[#0365A6] font-semibold">
                   Option 2: Partial Nail Avulsion with Matrixectomy
                 </h4>
@@ -254,7 +254,7 @@ const page = () => {
                   </div>
                 </div>
               </div>
-              <div className={`col w-full md:w-1/3 ${Styles.orthoCard}`}>
+              <div className="col w-full md:w-1/3 bg-blue-100 rounded-2xl p-5 shadow-sm">
                 <h4 className="text-xl text-[#0365A6] font-semibold">
                   Option 3: <br /> Onyfix Non-Surgical
                 </h4>
@@ -303,7 +303,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="row flex flex-col md:flex-row gap-5 rounded-2xl py-5 mx-auto lg:mx-30 2xl:mx-48">
+          <div className="row flex flex-col md:flex-row gap-5 rounded-2xl py-5 mx-auto">
             <div className={` col w-full md:w-1/3 bg-white p-5 rounded-lg `}>
               <h4 className="text-xl text-[#0365A6] font-semibold">
                 Foot & Ankle Ultrasound Imagingper Region
@@ -339,14 +339,14 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="row flex flex-col md:flex-row mx-auto lg:mx-30 2xl:mx-48 gap-5">
+          <div className="row flex flex-col md:flex-row mx-auto gap-5">
             <div className="col w-full md:w-2/3  flex flex-col gap-5 bg-white p-5 rounded-2xl">
               <h4 className="text-2xl text-[#0365A6] font-semibold text-center">
                 Biological Regenerative Amniotic Injection
               </h4>
               <div className="flex flex-col lg:flex-row gap-5">
                 <div className="col md:w-full flex flex-col gap-5">
-                  <div className={`!h-full ${Styles.orthoCard}`}>
+                  <div className="!h-full bg-blue-100 rounded-2xl p-5 shadow-sm">
                     <h4 className="text-xl text-[#0365A6] font-semibold">
                       Tier 1 (Pair) – Affordable, Premium Custom Orthotics
                     </h4>
@@ -357,7 +357,7 @@ const page = () => {
                       National Average Price: $500
                     </h4>
                   </div>
-                  <div className={`!h-full ${Styles.orthoCard}`}>
+                  <div className="!h-full bg-blue-100 rounded-2xl p-5 shadow-sm">
                     <h4 className="text-xl text-[#0365A6] font-semibold">
                       Tier 2 (Pair) – Elite Custom Orthotics
                     </h4>
@@ -366,7 +366,7 @@ const page = () => {
                     </h3>
                   </div>
                 </div>
-                <div className={`col w-full md:!h-full ${Styles.orthoCard}`}>
+                <div className="col w-full md:!h-full bg-blue-100 rounded-2xl p-5 shadow-sm">
                   <h4 className="text-xl text-[#0365A6] font-semibold">
                     Tier 3 (Pair) – 3D Printed Custom Orthotics
                   </h4>
@@ -473,7 +473,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="row flex flex-col md:flex-row mx-auto lg:mx-30 2xl:mx-48 gap-5 py-5">
+          <div className="row flex flex-col md:flex-row mx-auto gap-5 py-5">
             <div className="col w-full md:w-1/2 lg:w-3/5 bg-white rounded-2xl p-5 flex flex-col gap-3">
               <h4 className="text-xl text-[#0365A6] font-semibold">
                 Laser Treatment For Mild Toenail Fungus
@@ -581,7 +581,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="row flex flex-col md:flex-row mx-auto lg:mx-30 2xl:mx-48 gap-5 py-5">
+          <div className="row flex flex-col md:flex-row mx-auto gap-5 py-5">
             <div className="col w-full md:w-1/2 lg:w-3/5 bg-white rounded-2xl p-5 flex flex-col gap-3">
               <h4 className="text-xl text-[#0365A6] font-semibold">
                 Radial Shockwave Therapy
